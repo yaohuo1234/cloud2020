@@ -8,8 +8,10 @@
         <outputRelativeToContentRoot value="true" />
         <module name="api-jar" />
         <module name="cloud-order" />
-        <module name="cloud-paymemt" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="cloud-paymemt" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

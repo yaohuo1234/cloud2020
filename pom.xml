@@ -16,7 +16,6 @@
     <version>${version}</version>
     <modules>
         <module>cloud-order</module>
-        <module>cloud-paymemt</module>
         <module>api-jar</module>
     </modules>
     <packaging>pom</packaging>
