@@ -6,6 +6,10 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ *
+ * @param <T>
+ */
 @Getter
 @Setter
 @NoArgsConstructor
