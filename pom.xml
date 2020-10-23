@@ -12,6 +12,7 @@
         <module>api-jar</module>
         <module>cloud-consumers</module>
         <module>cloud-eureka-server</module>
+        <module>cloud-zuul</module>
     </modules>
     <packaging>pom</packaging>
 

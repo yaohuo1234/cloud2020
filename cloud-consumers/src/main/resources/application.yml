@@ -4,6 +4,11 @@ server:
 spring:
   application:
     name: cloud-consumers
+  redis:
+    database: 0
+    host: service-redis.thc-dev-ucbj-dev4.svc.unprod.ucbj.kuber.thc
+    port: 5000
+    password: 5hy7Wbsx78adWerj
 
 eureka:
   client:
@@ -11,3 +16,16 @@ eureka:
     register-with-eureka: true
     service-url:
       defaultZone: http://localhost:8001/eureka/
+
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 30000
+
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 5000
