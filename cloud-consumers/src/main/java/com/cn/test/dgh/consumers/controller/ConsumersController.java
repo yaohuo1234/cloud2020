@@ -19,7 +19,7 @@ public class ConsumersController {
     @Value("${spring.application.name}")
     private String appName;
 
-    private String url="http://localhost:9001";
+    private String url="http://CLOUD-ORDER";
 
     @Resource
     private RestTemplate restTemplate;
