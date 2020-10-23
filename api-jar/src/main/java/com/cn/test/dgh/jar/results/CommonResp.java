@@ -15,17 +15,16 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class  CommonResp<T> {
-    private Integer code;
-    private  String msg;
+    private Head head;
     private T data;
 
 
     public static <T>  CommonResp<T> buildSuccess(T data){
-        return new CommonResp<T>(200,"",data);
+        return new CommonResp<T>(new Head(200,null),data);
     }
 
     public static <T>  CommonResp<T> buildError(String msg){
-        return new CommonResp<T>(-1,msg,null);
+        return new CommonResp<T>(new Head(-1,msg),null);
     }
 
 }
