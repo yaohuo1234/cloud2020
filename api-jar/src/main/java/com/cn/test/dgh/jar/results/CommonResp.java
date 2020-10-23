@@ -19,4 +19,13 @@ public class  CommonResp<T> {
     private  String msg;
     private T data;
 
+
+    public static <T>  CommonResp<T> buildSuccess(T data){
+        return new CommonResp<T>(200,"",data);
+    }
+
+    public static <T>  CommonResp<T> buildError(String msg){
+        return new CommonResp<T>(-1,msg,null);
+    }
+
 }
