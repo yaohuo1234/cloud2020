@@ -10,6 +10,7 @@
     <modules>
         <module>cloud-order</module>
         <module>api-jar</module>
+        <module>cloud-consumers</module>
     </modules>
     <packaging>pom</packaging>
 
