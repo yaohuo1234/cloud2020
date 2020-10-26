@@ -1,5 +1,7 @@
 package com.cn.test.dgh.consumers.controller;
 
+import com.cn.test.dgh.consumers.fegin.OrderFeigin;
+import com.cn.test.dgh.consumers.service.ConsumersService;
 import com.cn.test.dgh.jar.results.CommonResp;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
@@ -27,16 +29,26 @@ public class ConsumersController {
 
     @Resource
     private RestTemplate restTemplate;
+    @Resource
+    private ConsumersService service;
 
     @GetMapping("/getById/{id}")
     public CommonResp<String> getConsumers(@PathVariable("id") String id){
         return CommonResp.buildSuccess(appName+":"+id);
     }
 
+//    @GetMapping("/getOrderById/{id}")
+//    public CommonResp<String> getOrderById(@PathVariable("id") String id){
+//        return  restTemplate.getForObject(url+"/order/getById/"+id,CommonResp.class);
+//    }
+
+
     @GetMapping("/getOrderById/{id}")
     public CommonResp<String> getOrderById(@PathVariable("id") String id){
-        return  restTemplate.getForObject(url+"/order/getById/"+id,CommonResp.class);
+        return  service.getOrderById(id);
     }
+
+
 
     @GetMapping("/leftPush/{id}")
     public CommonResp<String> leftPushById(@PathVariable("id") String id){

@@ -29,3 +29,8 @@ hystrix:
 ribbon:
   ReadTimeout: 10000
   ConnectTimeout: 5000
+
+logging:
+  level:
+    #feign日志以什么级别监控哪个接口
+    com.cn.test.dgh.consumers.fegin.OrderFeigin: debug

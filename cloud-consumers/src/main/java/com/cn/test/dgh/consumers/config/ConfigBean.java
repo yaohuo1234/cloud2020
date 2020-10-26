@@ -1,5 +1,6 @@
 package com.cn.test.dgh.consumers.config;
 
+import feign.Logger;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -18,5 +19,9 @@ public class ConfigBean {
     @Bean
     public StringRedisTemplate getStringRedisTemplate(RedisConnectionFactory factory){
         return new StringRedisTemplate(factory);
+    }
+    @Bean
+    Logger.Level getLogLevel(){
+        return Logger.Level.FULL;
     }
 }
