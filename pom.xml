@@ -13,6 +13,7 @@
         <module>cloud-consumers</module>
         <module>cloud-eureka-server</module>
         <module>cloud-zuul</module>
+        <module>hystrix-dashboard9090</module>
     </modules>
     <packaging>pom</packaging>
 
